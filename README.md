@@ -21,6 +21,8 @@
 * [infomail](https://infomail-frontend.herokuapp.com/) - InfoMail site
 * [swagger-ui](https://infomail-backend.herokuapp.com/swagger-ui/index.html?configUrl=/api/v1/api-docs/swagger-config) - API
 * [infomail-frontend](https://github.com/Lastzlo/Infomail-frontend) - Front-end part of the project
+* [presentation](https://docs.google.com/presentation/d/1b3__UhovdmZHmPkEundb0FxifjXbJPbz/edit?usp=sharing&ouid=100645824107772636818&rtpof=true&sd=true) - project presentation
+
 
 ## Start the project locally
 
