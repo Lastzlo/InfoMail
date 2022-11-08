@@ -12,6 +12,7 @@ import com.infopulse.infomail.services.security.AppUserService;
 import com.infopulse.infomail.services.mail.EmailTemplateService;
 import com.infopulse.infomail.services.scheduler.CronSchedulerService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,8 @@ import java.util.List;
 @Slf4j
 @SpringBootTest()
 public class EmailSendJobTest {
+
+	private final String DISABLE_REASON = "Disabled because ADMIN_ID is invalid";
 	@Autowired
 	private CronSchedulerService cronSchedulerService;
 	@Autowired
@@ -35,6 +38,7 @@ public class EmailSendJobTest {
 	// TODO: create cron expression descriptor and add desc to jobDetails
 	private static final String description = "FUTURE DESC OF CRON EXPRESSION";
 
+	@Disabled(DISABLE_REASON)
 	@Test
 	public void testAddEmail() {
 		Authentication authentication =

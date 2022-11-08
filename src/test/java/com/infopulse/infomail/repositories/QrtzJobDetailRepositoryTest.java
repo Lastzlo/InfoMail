@@ -42,7 +42,7 @@ class QrtzJobDetailRepositoryTest {
         assertFalse(dtoByJobName.isPresent());
     }
 
-//    @Disabled(DISABLE_REASON)
+    @Disabled(DISABLE_REASON)
     @Test
     void findByJobName() {
         Optional<QrtzJobDetail> jobDetail = qrtzJobDetailRepository.findByJobName(jobName);
