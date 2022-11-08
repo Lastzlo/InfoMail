@@ -1,5 +1,6 @@
 package com.infopulse.infomail.services.triggerStop;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,13 @@ import java.util.UUID;
 
 @SpringBootTest
 public class TriggerStopTest {
+
+	private final String DISABLE_REASON = "Disabled because jobName was obtained from an existing database, " +
+			"if you specify the actual 'jobName' and 'jobGroup' values, then you can remove the annotation";
 	@Autowired
 	private Scheduler scheduler;
 
+	@Disabled(DISABLE_REASON)
 	@Test
 	public void testTriggerStopping() throws SchedulerException {
 		CronTrigger trigger = TriggerBuilder.newTrigger()
