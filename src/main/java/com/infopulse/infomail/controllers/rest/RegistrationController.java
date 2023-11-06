@@ -21,6 +21,7 @@ public class RegistrationController {
 
 	@PostMapping
 	public ResponseEntity<?> register(@Valid @RequestBody RegistrationRequest request) {
+		log.info("Received new registration request: {}", request);
 		registrationService.register(request);
 		return ResponseEntity.ok().build();
 	}

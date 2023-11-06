@@ -17,4 +17,11 @@ public class RegistrationRequest {
 	@Length(min = 8, max = 24)
 	private final String password;
 
+	@Override
+	public String toString() {
+		return "RegistrationRequest{" +
+				"email='" + email + '\'' +
+				", password='" + password + '\'' +
+				'}';
+	}
 }
