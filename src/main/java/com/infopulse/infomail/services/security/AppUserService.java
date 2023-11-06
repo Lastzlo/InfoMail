@@ -29,17 +29,28 @@ public class AppUserService {
 
 	public static Long ADMIN_ID = 0L; // redundant
 	public static final String ADMIN_EMAIL = "admin@infomail.com"; // redundant
+	public static final String ADMIN_PASSWORD = "password"; // redundant
+	public static final String DEMO_EMAIL = "demo@mail.com"; // redundant
+	public static final String DEMO_PASSWORD = "demo"; // redundant
 
 
 	@PostConstruct // redundant methode
 	private void init() {
 		AppUser admin = appUserRepository.findAppUserByEmail(ADMIN_EMAIL).orElse(
-				new AppUser(ADMIN_EMAIL, passwordEncoder.encode("password"), AppUserRole.USER,
+				new AppUser(ADMIN_EMAIL, passwordEncoder.encode(ADMIN_PASSWORD), AppUserRole.USER,
 						true, true, true));
 		appUserRepository.save(admin);
 		ADMIN_ID = admin.getUserId();
 		log.info("\n==============================================\n" +
 				"Admin: " + admin +
+				"\n==============================================\n");
+
+		AppUser demo = appUserRepository.findAppUserByEmail(ADMIN_EMAIL).orElse(
+				new AppUser(DEMO_EMAIL, passwordEncoder.encode(DEMO_PASSWORD), AppUserRole.USER,
+						true, true, true));
+		appUserRepository.save(demo);
+		log.info("\n==============================================\n" +
+				"Demo account: " + demo +
 				"\n==============================================\n");
 	}
 
