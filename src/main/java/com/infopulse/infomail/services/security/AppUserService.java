@@ -45,7 +45,7 @@ public class AppUserService {
 				"Admin: " + admin +
 				"\n==============================================\n");
 
-		AppUser demo = appUserRepository.findAppUserByEmail(ADMIN_EMAIL).orElse(
+		AppUser demo = appUserRepository.findAppUserByEmail(DEMO_EMAIL).orElse(
 				new AppUser(DEMO_EMAIL, passwordEncoder.encode(DEMO_PASSWORD), AppUserRole.USER,
 						true, true, true));
 		appUserRepository.save(demo);
