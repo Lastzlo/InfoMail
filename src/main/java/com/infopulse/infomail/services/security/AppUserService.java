@@ -31,7 +31,7 @@ public class AppUserService {
 	public static final String ADMIN_EMAIL = "admin@infomail.com"; // redundant
 	public static final String ADMIN_PASSWORD = "password"; // redundant
 	public static final String DEMO_EMAIL = "demo@mail.com"; // redundant
-	public static final String DEMO_PASSWORD = "demo"; // redundant
+	public static final String DEMO_PASSWORD = "password"; // redundant
 
 
 	@PostConstruct // redundant methode
